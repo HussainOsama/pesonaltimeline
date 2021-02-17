@@ -1,101 +1,35 @@
 import logo from "./img/logo.svg";
 import "./css/App.css";
+import EventLeft from "./components/EventLeft";
+import data from "./js/data.js";
 
 function App() {
   return (
     <section class="page-section" id="about">
       <div class="container">
         <div class="text-center">
-          <h2 class="section-heading text-uppercase">About</h2>
+          <h2 class="section-heading text-uppercase">حسين أسامة محمد أسد</h2>
           <h3 class="section-subheading text-muted">
-            Lorem ipsum dolor sit amet consectetur.
+            أهلاً و سهلا بكم في صفحتي
           </h3>
         </div>
         <ul class="timeline">
-          <li>
-            <div class="timeline-image">
-              <img class="rounded-circle img-fluid" src="assets/1.jpg" alt="" />
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2009-2011</h4>
-                <h4 class="subheading">My Humble Beginnings</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                  ut voluptatum eius sapiente, totam reiciendis temporibus qui
-                  quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-                  dolore laudantium consectetur!
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="timeline-inverted">
-            <div class="timeline-image">
-              <img class="rounded-circle img-fluid" src="assets/2.jpg" alt="" />
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>March 2011</h4>
-                <h4 class="subheading">An Child is Born</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                  ut voluptatum eius sapiente, totam reiciendis temporibus qui
-                  quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-                  dolore laudantium consectetur!
-                </p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="timeline-image">
-              <img class="rounded-circle img-fluid" src="assets/3.jpg" alt="" />
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>December 2012</h4>
-                <h4 class="subheading">Transition to Full Service</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                  ut voluptatum eius sapiente, totam reiciendis temporibus qui
-                  quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-                  dolore laudantium consectetur!
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="timeline-inverted">
-            <div class="timeline-image">
-              <img class="rounded-circle img-fluid" src="assets/4.jpg" alt="" />
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>July 2014</h4>
-                <h4 class="subheading">Phase Two Expansion</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                  ut voluptatum eius sapiente, totam reiciendis temporibus qui
-                  quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-                  dolore laudantium consectetur!
-                </p>
-              </div>
-            </div>
-          </li>
+          {data.map((data) => (
+            <EventLeft
+              period={data.period}
+              title={data.title}
+              description={data.description}
+              img={data.img}
+              dir={data.dir}
+            />
+          ))}
+
           <li class="timeline-inverted">
             <div class="timeline-image">
               <h4>
-                Be Part
+                To Be
                 <br />
-                Of My
-                <br />
-                Story!
+                Continue
               </h4>
             </div>
           </li>
